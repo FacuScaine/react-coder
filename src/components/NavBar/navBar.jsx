@@ -1,7 +1,8 @@
 import React from "react";
-import './navBar.css';
+import './NavBar.css';
 import Tensop from "../imagenes/Tensop.png";
-import "bootstrap/dist/css/bootstrap.min.css"
+import { CartWidget } from "../CartWidget/CartWidget";
+
 
 
 export const NavBar = () => {
@@ -9,7 +10,7 @@ export const NavBar = () => {
         <nav className="navbar navbar-expand-lg bg-light">
         <div className="container-fluid">
           <a className="navbar-brand" href="./index.html">
-            <img src={Tensop} alt="Logo" height="auto"/> 
+            <img src={Tensop} alt="Logo" width="100%" height="auto"/> 
           </a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,6 +33,7 @@ export const NavBar = () => {
               <li className="nav-item">
                 <a className="nav-link" href="./pages/productos.html">Productos</a>
               </li>
+              <CartWidget></CartWidget>
             </ul>
           </div>
         </div>
