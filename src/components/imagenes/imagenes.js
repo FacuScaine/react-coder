@@ -1,0 +1,1 @@
+import detergente from './imagenes/1.jpg'
