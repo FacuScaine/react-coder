@@ -15,10 +15,11 @@ function App() {
         <Routes>
           <Route path='/'/>
           <Route path='/productos' element={<ItemListContainer />} />
-          <Route path='/detalle' element={<ItemDetailContainer />} />
+          <Route path='/detalle/:productoID' element={<ItemDetailContainer />} />
           <Route path='/cart' element={<Cart />} />
         </Routes>
       </BrowserRouter>
+
     </>
   );
 }
