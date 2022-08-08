@@ -7,7 +7,7 @@ import Cart from './components/Cart/Cart';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import CartProvider from './CartContext';
+import CartProvider from './contexts/CartContext';
 
 
 function App() {

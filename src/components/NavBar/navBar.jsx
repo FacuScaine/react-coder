@@ -29,7 +29,7 @@ export const NavBar = () => {
                 <NavLink className="nav-link" to=''>Contacto</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to='/detalle'>Detail</NavLink>
+                <NavLink className="nav-link" to=''>Empresa</NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to='/productos'>Productos</NavLink>
