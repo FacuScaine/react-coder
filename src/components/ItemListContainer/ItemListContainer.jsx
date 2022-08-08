@@ -1,4 +1,5 @@
 import React, {useEffect,useState} from "react";
+import { useParams } from "react-router-dom";
 import './ItemListContainer.css';
 import ItemList from "../ItemList/ItemList";
 import detergente from "../imagenes/1.jpg"
@@ -13,49 +14,56 @@ const productos = [
         id:1,
         image:`${detergente}`,
         title:"Detergente",
-        categoria:"Domestico"
+        categoria:"domestico"
     },
     {
         id:2,
         image:`${suavizante}`,
         title:"Suavizante",
-        categoria:"Domestico"
+        categoria:"domestico"
     },
     {
         id:3,
         image:`${desengrasante}`,
         title:"Desengrasante",
-        categoria:"Domestico"
+        categoria:"industrial"
     },
     {
         id:4,
         image:`${quitaGrasa}`,
         title:"Desengrasante",
-        categoria:"Domestico"
+        categoria:"domestico"
     },
     {
         id:5,
         image:`${antibacterial}`,
         title:"Desengrasante",
-        categoria:"Domestico"
+        categoria:"industrial"
     },
     {
         id:6,
         image:`${limpiaBaños}`,
         title:"Desengrasante",
-        categoria:"Domestico"
+        categoria:"industrial"
     }
 ]
 
 export const ItemListContainer = () => {
     const [data,setData] = useState([]);
 
+    const {categoriaID} = useParams();
+
     useEffect(() => {
         const getData = new Promise(resolve =>{
                 resolve(productos)
         });
-        getData.then(res => setData(res))
-    },[])
+        if(categoriaID){
+            getData.then(res => setData(res.filter(product => product.categoria === categoriaID)));
+        }else{
+            console.log("hola")
+            getData.then(res => setData(res))
+        }
+    },[categoriaID])
 
     return (
         <>

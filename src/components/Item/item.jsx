@@ -6,7 +6,7 @@ export const Item = ({info}) => {
     return (
         <Link to={`/detalle/${info.id}`} className="producto">
             <img src={info.image} alt='hola' />
-            <p>{info.title}</p>
+            <h5>{info.title}</h5>
         </Link>
     )
 

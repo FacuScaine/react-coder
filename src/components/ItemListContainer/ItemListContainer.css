@@ -1,0 +1,6 @@
+.catalogo{
+    background-color: #C7F9CC;
+    border: 5px solid #22577A;
+    display: flex;
+    flex-direction: column;
+}
