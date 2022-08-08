@@ -14,37 +14,43 @@ const productos = [
         id:1,
         image:`${detergente}`,
         title:"Detergente",
-        categoria:"domestico"
+        categoria:"domestico",
+        price:100
     },
     {
         id:2,
         image:`${suavizante}`,
         title:"Suavizante",
-        categoria:"domestico"
+        categoria:"domestico",
+        price:200
     },
     {
         id:3,
         image:`${desengrasante}`,
         title:"Desengrasante",
-        categoria:"industrial"
+        categoria:"industrial",
+        price:300
     },
     {
         id:4,
         image:`${quitaGrasa}`,
         title:"Desengrasante",
-        categoria:"domestico"
+        categoria:"domestico",
+        price:400
     },
     {
         id:5,
         image:`${antibacterial}`,
         title:"Desengrasante",
-        categoria:"industrial"
+        categoria:"industrial",
+        price:500
     },
     {
         id:6,
         image:`${limpiaBaños}`,
         title:"Desengrasante",
-        categoria:"industrial"
+        categoria:"industrial",
+        price:600
     }
 ]
 
@@ -60,7 +66,6 @@ export const ItemListContainer = () => {
         if(categoriaID){
             getData.then(res => setData(res.filter(product => product.categoria === categoriaID)));
         }else{
-            console.log("hola")
             getData.then(res => setData(res))
         }
     },[categoriaID])
